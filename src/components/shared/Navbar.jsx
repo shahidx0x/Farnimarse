@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [searchInput, setSearchInput] = useState(true);
@@ -135,35 +136,43 @@ export default function Navbar() {
               </h1>
               <ul className="hidden w-8/12 md:flex items-center justify-center space-x-8">
                 <li>
-                  <a
-                    href="javascript:void(0)"
+                  <Link
+                    to="/"
                     className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline"
                   >
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="javascript:void(0)"
+                  <Link
+                    to="/furnitures"
                     className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline"
                   >
                     Furniture
-                  </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/product-reviews"
+                    className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline"
+                  >
+                    Testimonial
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/blogs"
+                    className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline"
+                  >
+                    Blogs
+                  </Link>
                 </li>
                 <li>
                   <a
-                    href="javascript:void(0)"
+                    href="/contacts"
                     className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline"
                   >
-                    Lookbook
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="javascript:void(0)"
-                    className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline"
-                  >
-                    Support
+                    Contact
                   </a>
                 </li>
               </ul>
