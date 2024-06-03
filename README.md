@@ -1,6 +1,6 @@
 # The Farnimarse
 
-Welcome to The Farnimarse, a modern furniture e-commerce website built using the MERN stack (MongoDB, Express.js, React.js, Node.js). The Crib offers a curated selection of luxiwood interiors and helps users get inspired to have luxurious interiors themselves.
+Welcome to The Farnimarse, a modern furniture e-commerce website built using the MERN stack (MongoDB, Express.js, React.js, Node.js). The Farnimarse offers a curated selection of luxiwood interiors and helps users get inspired to have luxurious interiors themselves.
 
 ## Table of Contents
 
