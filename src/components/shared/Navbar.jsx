@@ -1,6 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
+import {
+  Menubar,
+  MenubarContent,
+  MenubarItem,
+  MenubarMenu,
+  MenubarTrigger,
+} from "@/components/ui/menubar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 export default function Navbar() {
   const [searchInput, setSearchInput] = useState(true);
   const [mdOptionsToggle, setMdOptionsToggle] = useState(true);
@@ -173,6 +180,14 @@ export default function Navbar() {
                     className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline"
                   >
                     Contact
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/faq"
+                    className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline"
+                  >
+                    FAQ
                   </a>
                 </li>
               </ul>
@@ -348,6 +363,27 @@ export default function Navbar() {
                     </svg>
                   </button>
                 </div>
+                <Menubar>
+                  <MenubarMenu>
+                    <MenubarTrigger>
+                      <Avatar>
+                        <AvatarImage
+                          src="https://github.com/shadcn.png"
+                          alt="@shadcn"
+                        />
+                        <AvatarFallback>CN</AvatarFallback>
+                      </Avatar>
+                    </MenubarTrigger>
+                    <MenubarContent>
+                      <MenubarItem>
+                        <Link to="/universities">My Profile</Link>
+                      </MenubarItem>
+                      <MenubarItem>Wishlist</MenubarItem>
+                      <MenubarItem>Shoping Carts</MenubarItem>
+                      <MenubarItem>Order History</MenubarItem>
+                    </MenubarContent>
+                  </MenubarMenu>
+                </Menubar>
               </div>
             </div>
           </div>
@@ -448,8 +484,8 @@ export default function Navbar() {
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="javascript:void(0)"
+                  <Link
+                    to="/furnitures"
                     className="dark:text-white flex items-center justify-between hover:underline text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800"
                   >
                     Furniture
@@ -471,14 +507,14 @@ export default function Navbar() {
                         />
                       </svg>
                     </div>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="javascript:void(0)"
+                  <Link
+                    to="/product-reviews"
                     className="dark:text-white flex items-center justify-between hover:underline text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800"
                   >
-                    Lookbook
+                    Testimonial
                     <div>
                       <svg
                         className="fill-stroke text-black dark:text-white"
@@ -497,14 +533,14 @@ export default function Navbar() {
                         />
                       </svg>
                     </div>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="javascript:void(0)"
+                  <Link
+                    to="/blogs"
                     className="dark:text-white flex items-center justify-between hover:underline text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800"
                   >
-                    Support
+                    Blogs
                     <div>
                       <svg
                         className="fill-stroke text-black dark:text-white"
@@ -523,7 +559,59 @@ export default function Navbar() {
                         />
                       </svg>
                     </div>
-                  </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/contacts"
+                    className="dark:text-white flex items-center justify-between hover:underline text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800"
+                  >
+                    Contact
+                    <div>
+                      <svg
+                        className="fill-stroke text-black dark:text-white"
+                        width={12}
+                        height={12}
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M4.5 3L7.5 6L4.5 9"
+                          stroke="currentColor"
+                          strokeWidth="0.75"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/faq"
+                    className="dark:text-white flex items-center justify-between hover:underline text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800"
+                  >
+                    FAQ
+                    <div>
+                      <svg
+                        className="fill-stroke text-black dark:text-white"
+                        width={12}
+                        height={12}
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M4.5 3L7.5 6L4.5 9"
+                          stroke="currentColor"
+                          strokeWidth="0.75"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </Link>
                 </li>
               </ul>
             </div>
