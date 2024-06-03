@@ -376,11 +376,20 @@ export default function Navbar() {
                     </MenubarTrigger>
                     <MenubarContent>
                       <MenubarItem>
-                        <Link to="/universities">My Profile</Link>
+                        <Link to="/dashboard/profile">My Profile</Link>
                       </MenubarItem>
-                      <MenubarItem>Wishlist</MenubarItem>
-                      <MenubarItem>Shoping Carts</MenubarItem>
-                      <MenubarItem>Order History</MenubarItem>
+                      <MenubarItem>
+                        <Link to="/dashboard/wishlist">WishList</Link>
+                      </MenubarItem>
+                      <MenubarItem>
+                        <Link to="/dashboard/shoping-cart">Carts</Link>
+                      </MenubarItem>
+                      <MenubarItem>
+                        <Link to="/dashboard/order-history">Order History</Link>
+                      </MenubarItem>
+                      <MenubarItem>
+                        <Link to="/logout">Logout</Link>
+                      </MenubarItem>
                     </MenubarContent>
                   </MenubarMenu>
                 </Menubar>

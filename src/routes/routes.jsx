@@ -8,6 +8,11 @@ import ProductReviews from "@/pages/ProductReviews";
 import Login from "@/pages/Login";
 import Registration from "@/pages/Registration";
 import FAQ from "@/pages/Faq";
+import UserDashbord from "@/layouts/UserDashbord";
+import Profile from "@/pages/dashboard/users/Profile";
+import WishList from "@/pages/dashboard/users/WishList";
+import OrderHistory from "@/pages/dashboard/users/OrderHistory";
+import ShoppingCart from "@/pages/dashboard/users/ShoppingCart";
 
 export const router = createBrowserRouter([
   {
@@ -45,6 +50,28 @@ export const router = createBrowserRouter([
       {
         path: "/product-reviews",
         element: <ProductReviews />,
+      },
+    ],
+  },
+  {
+    path: "/dashboard",
+    element: <UserDashbord />,
+    children: [
+      {
+        path: "profile",
+        element: <Profile />,
+      },
+      {
+        path: "wishlist",
+        element: <WishList />,
+      },
+      {
+        path: "order-history",
+        element: <OrderHistory />,
+      },
+      {
+        path: "shoping-cart",
+        element: <ShoppingCart />,
       },
     ],
   },
