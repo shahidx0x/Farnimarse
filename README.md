@@ -4,7 +4,7 @@ Welcome to The Farnimarse, a modern furniture e-commerce website built using the
 
 ## Table of Contents
 
-- [Features](#features)
+- [Features](#feature)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
