@@ -14,6 +14,16 @@ Welcome to The Farnimarse, a modern furniture e-commerce website built using the
 
 ## Features
 
+
+## Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/shahidx0x/Farnimarse.git
+   cd Farnimarse
+   npm install | npm run dev
+   ```
+
 - **User Authentication and Authorization**:
 
   - Signup and Login functionality using JWT for secure access.
@@ -59,11 +69,4 @@ Welcome to The Farnimarse, a modern furniture e-commerce website built using the
   - Mongoose
   - JWT (JsonWebToken)
 
-## Installation
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/shahidx0x/Farnimarse.git
-   cd Farnimarse
-   npm install | npm run dev
-   ```
