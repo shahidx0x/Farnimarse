@@ -2,19 +2,6 @@
 
 Welcome to The Farnimarse, a modern furniture e-commerce website built using the MERN stack (MongoDB, Express.js, React.js, Node.js). The Farnimarse offers a curated selection of luxiwood interiors and helps users get inspired to have luxurious interiors themselves.
 
-## Table of Contents
-
-- [Features](#feature)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [Contributing](#contributing)
-- [License](#license)
-
-## Features
-
-
 ## Installation
 
 1. **Clone the repository**:
@@ -23,6 +10,9 @@ Welcome to The Farnimarse, a modern furniture e-commerce website built using the
    cd Farnimarse
    npm install | npm run dev
    ```
+
+## Features
+
 
 - **User Authentication and Authorization**:
 
