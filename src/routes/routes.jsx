@@ -13,6 +13,10 @@ import Profile from "@/pages/dashboard/users/Profile";
 import WishList from "@/pages/dashboard/users/WishList";
 import OrderHistory from "@/pages/dashboard/users/OrderHistory";
 import ShoppingCart from "@/pages/dashboard/users/ShoppingCart";
+import AdminDashbord from "@/layouts/AdminDashbord";
+import Analytics from "@/pages/dashboard/admin/Analytics";
+import ManageProducts from "@/pages/dashboard/admin/ManageProducts";
+import ManageOrders from "@/pages/dashboard/admin/ManageOrders";
 
 export const router = createBrowserRouter([
   {
@@ -72,6 +76,30 @@ export const router = createBrowserRouter([
       {
         path: "shoping-cart",
         element: <ShoppingCart />,
+      },
+    ],
+  },
+  {
+    path: "/admin/dashboard",
+    element: <AdminDashbord />,
+    children: [
+      {
+        path: "analytics",
+        element: <Analytics />,
+      },
+      {
+        path: "manage/products",
+        element: <ManageProducts />,
+      },
+      {
+        path: "manage/orders",
+        element: <ManageOrders />,
+      },
+      {
+        path: "manage/blogs",
+      },
+      {
+        path: "manage/testimonials",
       },
     ],
   },
