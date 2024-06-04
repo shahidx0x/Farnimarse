@@ -30,7 +30,6 @@ Welcome to The Farnimarse, a modern furniture e-commerce website built using the
 - **Order Management**:
 
   - Order history tracking.
-  - Checkout process.
 - **Content Management**:
 
   - Blog section for articles on furniture trends and tips.
@@ -51,7 +50,7 @@ Welcome to The Farnimarse, a modern furniture e-commerce website built using the
   - Redux
   - React Router
   - Axios
-  - CSS/SCSS
+  - Tailwind CS
 - **Backend**:
 
   - Node.js
@@ -64,6 +63,7 @@ Welcome to The Farnimarse, a modern furniture e-commerce website built using the
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/the-crib.git
-   cd the-crib
+   git clone https://github.com/shahidx0x/Farnimarse.git
+   cd Farnimarse
+   npm install | npm run dev
    ```
