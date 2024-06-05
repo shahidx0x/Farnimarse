@@ -1,64 +1,100 @@
-export default function Login() {
+import useForm from "@/hooks/useForm";
+import { FaFacebook, FaGoogle } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
+const Login = () => {
+  const style = {
+    position: "relative",
+    height: "0px",
+    width: "0px",
+    float: "left",
+  };
+  const initialValues = {
+    email: "",
+    password: "",
+  };
+  const { formData, handleChange, handleSubmit } = useForm(initialValues);
+  const submitForm = (data) => {
+    console.log("Form Data:", data);
+  };
+
   return (
-    <div className=" 2xl:container flex justify-center items-center w-full 2xl:mx-auto lg:px-20 md:py-12 md:px-6 py-9 px-4">
-      <div className="w-80 md:w-auto grid lg:grid-cols-3 grid-cols-1 lg:gap-8 gap-6">
-        <div className="relative group">
-          <img
-            className="lg:block hidden w-full"
-            src="https://i.ibb.co/SnL9NZV/pexels-two-dreamers-2345236-1.png"
-            alt="Women"
-          />
-          <img
-            className="lg:hidden md:block hidden w-full"
-            src="https://i.ibb.co/PwMpH9g/pexels-two-dreamers-2345236-1-1.png"
-            alt="Women"
-          />
-          <img
-            className="w-full md:hidden"
-            src="https://i.ibb.co/Ks91wpt/pexels-two-dreamers-2345236-1.png"
-            alt="Women"
-          />
-          <div className="opacity-0 bg-gradient-to-t from-gray-800 via-gray-800 to-opacity-30 group-hover:opacity-50 absolute top-0 left-0 h-full w-full" />
-          <div className=" absolute top-0 left-0 w-full h-full flex justify-start items-end opacity-0 hover:opacity-100 p-8">
-            <p className=" font-semibold text-2xl leading-6 text-white">
-              Women
-            </p>
+    <div className="flex justify-center auth-section">
+      <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-50 text-gray-800">
+        <h1 className="text-2xl font-bold text-center">Login</h1>
+        <form
+          onSubmit={handleSubmit(submitForm)}
+          noValidate=""
+          action=""
+          className="space-y-6"
+        >
+          <div className="space-y-1 text-sm">
+            <label htmlFor="username" className="block text-gray-600">
+              Email
+            </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              value={formData.email}
+              onChange={handleChange}
+              className="w-full px-4 py-3 border rounded-md border-gray-300 bg-gray-50 text-gray-800 focus:border-blue-600"
+            />
+            <div data-lastpass-icon-root="" style={style}></div>
           </div>
-        </div>
-        <div className=" lg:px-6 lg:py-0 md:py-16 md:px-24 py-16 px-6 flex flex-col justify-center items-center text-center bg-gray-100">
-          <h2 className=" font-semibold lg:text-4xl text-3xl lg:leading-10 leading-9 text-gray-800 lg:w-full md:w-7/12 w-full">
-            Shop your Favourite Designers
-          </h2>
-          <p className=" font-medium text-base leading-6 text-gray-600 mt-4 lg:w-full md:w-7/12 w-full">
-            We offer a huge colletion of premium clothing that are crafted with
-            excellence for our adored customers
+          <div className="space-y-1 text-sm">
+            <label htmlFor="password" className="block text-gray-600">
+              Password
+            </label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+              value={formData.password}
+              onChange={handleChange}
+              className="w-full px-4 py-3 rounded-md border border-gray-300 bg-gray-50 text-gray-800 focus:border-blue-600"
+            />
+            <div className="flex justify-end text-xs text-gray-600">
+              <a rel="noopener noreferrer" href="#">
+                Forgot Password?
+              </a>
+            </div>
+            <div data-lastpass-icon-root="" style={style}></div>
+          </div>
+          <button className="block w-full p-3 text-center rounded-sm text-gray-50 bg-blue-600">
+            Sign in
+          </button>
+        </form>
+        <div className="flex items-center pt-4 space-x-1">
+          <div className="flex-1 h-px sm:w-16 bg-gray-300"></div>
+          <p className="px-3 text-sm text-gray-600">
+            Login with social accounts
           </p>
-          <button className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 hover:bg-gray-700 text-white text-base leading-4 bg-gray-800 lg:px-10 py-4 lg:w-auto w-72 mt-16">
-            Discover More
+          <div className="flex-1 h-px sm:w-16 bg-gray-300"></div>
+        </div>
+        <div className="flex justify-center space-x-4">
+          <button aria-label="Log in with Google" className="p-3 rounded-sm">
+            <FaGoogle />
+          </button>
+          <button aria-label="Log in with Twitter" className="p-3 rounded-sm">
+            <FaFacebook />
           </button>
         </div>
-        <div className="relative group">
-          <img
-            className="lg:block hidden w-full"
-            src="https://i.ibb.co/gVMrdyp/pexels-mpumelelo-buthelezi-4503712-1-1.png"
-            alt="Man"
-          />
-          <img
-            className="lg:hidden md:block hidden w-full"
-            src="https://i.ibb.co/hYmYWgT/pexels-two-dreamers-2345236-2.png"
-            alt="Man"
-          />
-          <img
-            className="w-full md:hidden"
-            src="https://i.ibb.co/99kYP9T/pexels-two-dreamers-2345236-2.png"
-            alt="Man"
-          />
-          <div className="opacity-0 bg-gradient-to-t from-gray-800 via-gray-800 to-opacity-30 group-hover:opacity-50 absolute top-0 left-0 h-full w-full" />
-          <div className=" absolute top-0 left-0 w-full h-full flex justify-start items-end opacity-0 hover:opacity-100 p-8">
-            <p className=" font-semibold text-2xl leading-6 text-white">Men</p>
-          </div>
-        </div>
+        <p className="text-xs text-center sm:px-6 text-gray-600">
+          Dont have an account?
+          <Link
+            rel="noopener noreferrer"
+            to="/registration"
+            className="underline text-gray-800"
+          >
+            Sign up
+          </Link>
+        </p>
       </div>
     </div>
   );
-}
+};
+
+export default Login;

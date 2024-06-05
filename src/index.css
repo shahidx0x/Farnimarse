@@ -92,3 +92,7 @@
   .dashboard-section{
     @apply p-6 bg-gray-100 text-gray-900 h-screen rounded-xl mt-6
   }
+
+  .auth-section{
+    @apply p-6 bg-gray-100 text-gray-900 rounded-xl
+  }
